@@ -1,0 +1,24 @@
+{
+  "Spain": {
+    "coffee_type" : "latte",
+    "portion" : "double",
+    "base_price": 1,
+    "milk_price": 0.3,
+    "syrup_price": 0.5,
+    "syrup_type": "melon",
+    "tax_rate" : 3,
+    "complement_price" : 1,
+    "complement_type" : "1 chocolate bar"
+  },
+  "Italy": {
+    "coffee_type" : "latte",
+    "portion" : "single",
+    "base_price": 1.5,
+    "milk_price": 0.4,
+    "syrup_price": 0.5,
+    "syrup_type": "coconut",
+    "tax_rate": 7,
+    "complement_price": 1,
+    "complement_type" : "croissant"
+  }
+}
