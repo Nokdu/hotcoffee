@@ -8,23 +8,23 @@ use app\helper\Order;
 class MakeCoffee
 {
 
-    public function createCoffee()
+    public function createOrder($params)
     {
-        if (!empty($_GET)) {
-            $country = $_GET["country"];
+        if (!empty($params)) {
+            $country = $params["country"];
             $accessToken = json_decode(file_get_contents('./app/shop-prices.json'), true);
-            return new Order($this->getSyrup(), $this->getComplement(), new CoffeeMenu($accessToken[$country]));
+            return new Order($this->getSyrup($params), $this->getComplement($params), new CoffeeMenu($accessToken[$country]));
         }
     }
 
-    private function getSyrup()
+    private function getSyrup($params)
     {
-        return isset($_GET['syrup']) ? $_GET['syrup'] == 'yes' ? true : false : false;
+        return isset($params['syrup']) ? $params['syrup'] == 'yes' ? true : false : false;
     }
 
-    private function getComplement()
+    private function getComplement($params)
     {
-        return isset($_GET['complement']) ? $_GET['complement'] == 'yes' ? true : false : false;
+        return isset($params['complement']) ? $params['complement'] == 'yes' ? true : false : false;
     }
 
 

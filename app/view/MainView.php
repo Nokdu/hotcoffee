@@ -22,7 +22,7 @@
     <p><input type="submit"></p>
 </form>
 <?php
-if (!empty($_GET['country'])) {
+if (!is_null($order)) {
     echo '<b>Menu:</b><Br><Br>';
     foreach ($order->getIngredients() as $ingredientKey => $ingredientValue) {
         echo $ingredientKey . ": " . $ingredientValue . '<Br>';

@@ -10,8 +10,8 @@ class main
     public static function action()
     {
         $coffeeAction = new MakeCoffee();
-        $order = $coffeeAction->createCoffee();
-        include 'app/view/helloView.php';
+        $order = $coffeeAction->createOrder($_GET);
+        include 'app/view/MainView.php';
     }
 }
 
